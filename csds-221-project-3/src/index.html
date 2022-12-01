@@ -1,0 +1,69 @@
+<!-- Stuff for Tic-Tac-Toe:
+Style buttons 
+
+For each turn, display squares, X for player 1, O for player 2. Player can pick a square. If square is open, it becomes X or O for the player. If square is taken, put error toastr saying the square is taken. When valid square chosen, check against win conditions. If a player has won, give an alert saying who won which refreshes the page on close. If player has not won, change players and continue playing -->
+<h1 id="header"> Tic Tac Toe </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <form>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="playerCount" id="singleplayer" value="singleplayer">
+          <label class="form-check-label">
+            Singleplayer
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="playerCount" id="multiplayer" value="multiplayer" checked>
+          <label class="form-check-label">
+            Multiplayer
+          </label>
+        </div>
+        <br>
+        <button type="button" class="btn btn-secondary" style="font-size: 100%; width:80%;" id="resetButton">Reset</button>
+        <br>
+        <br>
+        <p id="whichPlayer">Player 1's Turn</p>
+    </div>
+    <div class="col-lg-2">
+      <div class="row">
+        <button type="button" class="btn btn-secondary py-0" id="1-1">&nbsp;</button>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-secondary py-0" id="2-1">&nbsp;</button>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-secondary py-0" id="3-1">&nbsp;</button>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="row">
+        <button type="button" class="btn btn-secondary py-0" id="1-2">&nbsp;</button>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-secondary py-0" id="2-2">&nbsp;</button>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-secondary py-0" id="3-2">&nbsp;</button>
+      </div>
+    </div>
+    <div class="col-lg-2">
+      <div class="row">
+        <button type="button" class="btn btn-secondary py-0" id="1-3">&nbsp;</button>
+        <button type="button" class="btn btn-secondary py-0" id="2-3">&nbsp;</button>
+        <button type="button" class="btn btn-secondary py-0" id="3-3">&nbsp;</button>
+      </div>
+      </button>
+    </div>
+
+    <div class="modal fade" id="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <h1 class="modal-title" id="dialogText">
+          </h1>
+          <button type="button" class="close" id="dialogClose">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
